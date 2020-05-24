@@ -1,0 +1,125 @@
+.Card{
+    height: 90vh;
+    width:80%;
+    min-width:900px;
+    min-width: 65%;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    transform: translate(25%,0);
+    background-color: rgba(10, 10, 10, 0.671);
+    color: white;
+   animation: fadeIn 1s ;
+   border-radius: 5px;
+   position: absolute;
+   top: 15%;
+   right: 30%;
+}
+span #afterRdBtn{
+    display: none;
+}
+.dots{
+    font-weight: bold;
+}
+
+.TextSide{
+    width: 100%;
+    padding-right: 1%;
+}
+
+
+.TextSide h1{
+    font-size: 2.5em;
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 80%;
+}
+.TextSide h3{
+    font-size: 20px;
+    color: #00FC87;
+    text-align: start;
+    font-family: 'Oswald';
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 20px;
+    max-height: 132px;
+}
+.TextSide p{
+    word-wrap: break-word;
+    width: 90%;
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 3%;
+    min-width: 382px;
+
+}
+.AdditionalDetails1{
+    box-sizing: border-box;
+    width: 50%;
+    display: inline-block;
+}
+.AdditionalDetails1{
+    margin-top: 3%;
+}
+.AdditionalDetails1 p{
+    margin-top: 3%;
+}
+.AdditionalDetails1 h3{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.Card img{
+    width: 43%;
+    max-width: 45%;
+    min-width: 40%;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  @keyframes fadeIn{
+      0%{
+          opacity: 0;
+      }
+      100%{
+          opacity: 1;
+      }
+  }
+
+  
+  /* custom class for story p tag to adjust the overflow */
+  .hiddenFlow{
+    height:20% ;
+    overflow-y: scroll;
+   overflow-x: hidden;
+}
+  @media(max-width:852px){
+      .Card{
+          flex-direction: column;
+          height: fit-content;
+          width: 90%;
+          transform: translate(6%,0);
+          left: 0;
+          top: 22%;
+      }
+      .Card img{
+          width: 100%;
+          max-width: 100%;
+          display: block;
+          order: 2;
+      }
+      
+      .hiddenFlow{
+        height:inherit;
+        overflow-y: hidden;
+       overflow-x: hidden;
+    }
+      
+  }
+
+
+  
+  

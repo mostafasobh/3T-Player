@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react'
+import './App.css'
+import {withRouter} from 'react-router'
+import {Route,Switch} from 'react-router-dom'
+import MoviesPage from './Containers/Movie/movie'
+import SeriesPage from './Containers/series/series'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+
+  state={
+    switch:false
+  }
+
+  // componentDidMount(){
+  //     this.props.history.replace('/series')
+  // }
+  onChangePageHandler=()=>{
+    const newState=!this.state.switch
+    this.setState({switch:newState})
+  }
+  
+  render(){
+   
+
+    return(
+      <div className='App'>
+      <Switch>
+        <Route key='movies' path='/movies' component={MoviesPage} />
+        <Route key='series' path='/series' component={SeriesPage} />
+      </Switch>
+      </div>
+    )
+  }
+  
 }
 
-export default App;
+export default withRouter(App)

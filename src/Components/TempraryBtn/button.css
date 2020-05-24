@@ -1,0 +1,27 @@
+.btn{
+    color: rgb(255, 255, 255);
+    font-family: 'Lato','sans-serif';
+    padding:10px 60px;
+    background-color: rgb(125, 184, 211);
+    border: 1px solid rgb(125, 184, 211);
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 7%;
+    left: 13.5%;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .btn:hover{
+    background-color: rgb(76, 116, 226);
+    border-color:  rgb(76, 116, 226);
+  }
+  @media(max-width:852px){
+    .btn{
+      left: 25%;
+      top: 16%;
+      padding: 10px 170px;
+    }
+    
+    
+}

@@ -1,0 +1,24 @@
+.inp_fieled{
+    width: 39%;
+    height: 37px;
+   font-size: 1.2rem;
+   outline: none;
+   border: 0;
+   border-bottom: 1px solid rgb(255, 255, 255);
+   left: 47%;
+   top:7%;
+   background: 0;
+   color: rgb(255, 255, 255);
+   position: absolute;
+   font-family: 'Lato','sans-sarif';
+}
+.inp_fieled::placeholder{
+    color: rgba(147, 255, 156, 0.747);
+}
+@media(max-width:852px){
+    .inp_fieled{
+        width: 80%;
+        left: 10%;
+    }
+
+}
