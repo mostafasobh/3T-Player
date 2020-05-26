@@ -1,5 +1,6 @@
 .Card{
-    height: 90vh;
+    height: 91vh;
+    max-height: 92vh;
     width:80%;
     min-width:900px;
     min-width: 65%;
@@ -24,7 +25,10 @@ span #afterRdBtn{
 
 .TextSide{
     width: 100%;
-    padding-right: 1%;
+    padding-right: 3%;
+    padding-left: 3%;
+    height: 80vh;
+    min-height: 80vh;
 }
 
 
@@ -47,11 +51,12 @@ span #afterRdBtn{
 }
 .TextSide p{
     word-wrap: break-word;
-    width: 90%;
+    width: 88%;
     text-align: start;
-    margin-left: 20px;
+    margin-left: 1%;
     margin-top: 3%;
-    min-width: 382px;
+    max-width: 500px;
+    max-height: 120px;
 
 }
 .AdditionalDetails1{
@@ -99,7 +104,7 @@ span #afterRdBtn{
   @media(max-width:852px){
       .Card{
           flex-direction: column;
-          height: fit-content;
+          height:fit-content;
           width: 90%;
           transform: translate(6%,0);
           left: 0;
@@ -112,11 +117,7 @@ span #afterRdBtn{
           order: 2;
       }
       
-      .hiddenFlow{
-        height:inherit;
-        overflow-y: hidden;
-       overflow-x: hidden;
-    }
+     
       
   }
 

@@ -5,7 +5,7 @@ const list=(props)=>{
 
 
     return(
-        <datalist id={props.idList} onChange={props.change}>
+        <datalist key={'string'} id={props.idList} onChange={props.change}>
           {props.options.map((option,index)=>{
               return <option key={index} id='opt' value={option} />
           })}

@@ -5,7 +5,6 @@ import List from '../../Components/List/list'
 import Card from '../../Components/Card/Card'
 import * as actions from '../../store/action/action'
 import './series.css'
-import Button from '../../Components/TempraryBtn/button'
 
 class Series extends Component{
 
@@ -53,8 +52,7 @@ onChangeNameHandler=(event)=>{
         let options= this.props.options
 
         return(
-            <div className='movieCard' style={{backgroundImage:`url(${this.props.img})`}}>
-            <Button changePage={this.onChangePageHandler} page='Move To Movies'  />
+            <div className='movieCard' style={{backgroundImage:`url(${this.props.img})`,width:'100%'}}>
             <Input tpy='text' list='series' plcH='Series-Name' change={this.onChangeNameHandler} options={options}/>
             <List idList='series' plcH='Serie-Name' options={options} />
             <Card

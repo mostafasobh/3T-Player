@@ -99,6 +99,7 @@ export const orderSeries=(seriesName)=>{
             
         }).then(res=>{
             axios.get(`https://api.themoviedb.org/3/tv/${res}?api_key=686f3b54e377c347e4011e136a5b959f&language=en-US`).then(response=>{
+                console.log(response)
                 const response_path= response.data
                 const genres=response_path.genres.map(gener=> gener.name)
                 dispatch(seriesReqSuccess(response_path.backdrop_path,response_path.poster_path,response_path.original_name,response_path.overview,response_path.first_air_date,genres,response_path.number_of_episodes,response_path.number_of_seasons,response_path.vote_average))

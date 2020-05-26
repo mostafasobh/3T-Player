@@ -7,7 +7,6 @@ import Input from '../../Components/input/input'
 import List from '../../Components/List/list'
 import Card from '../../Components/Card/Card'
 //
-import Button from '../../Components/TempraryBtn/button'
 
 class Movie extends Component {
 
@@ -27,28 +26,30 @@ onChangeNameHandler=(event)=>{
 if(event.target.value.length >= 2){
   this.props.onOrderOPtions(event.target.value)
 }
-  for(let i=0;i<optionsVal.length;i++){
-    if(optionsVal[i].value === inputVal){
-      this.setState({optionalValue:optionsVal})
-      this.props.onWatchMovie(inputVal)
-    }
-  }
+// for(let i=0;i<optionsVal.length;i++){
+//   if(optionsVal[i].value === inputVal){
+//     this.setState({optionalValue:optionsVal})
+//     console.log('this.state.optionsValue')
+//       this.props.onWatchMovie(inputVal)
+//     }
+//   }
   let newState=event.target.value
   this.setState({value:newState})
-  }
+}
   handleKeyPress = (event) => {
-    if(this.state.optionalValue ===this.state.value){
+    if(this.state.optionalValue === this.state.value){
+      console.log(this.state.optionsValue)
     if(event.key === 'Enter'){
       this.props.onWatchMovie(this.state.value)
     }
   }
   }
 
-    //will be modified soon
+  //will be modified soon
   onChangePageHandler=()=>{
     this.props.history.push('/series')
   }
-
+  
   render(){
     
     let options= this.props.options
@@ -56,8 +57,7 @@ if(event.target.value.length >= 2){
 
     const Moviepage=(
       <div className="movieCard" style={{backgroundImage:`url(${this.props.img})`}}>
-        <Button changePage={this.onChangePageHandler} page='Move To Series'  />
-      <Input tpy='text' list='movies'  plcH='Movie-Name' change={this.onChangeNameHandler}/>
+      <Input tpy='text' list='movies'  plcH='Movie-Name' change={this.onChangeNameHandler} onKeyPress={this.handleKeyPress}/>
       <List change={this.handleChange} idList='movies'  options={options} />
       <Card 
       title={this.props.title}
